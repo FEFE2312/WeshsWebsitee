@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-dark-gray text-cream font-sans;
+}
+
+.swiper-pagination-bullet {
+  @apply bg-cream opacity-70;
+}
+
+.swiper-pagination-bullet-active {
+  @apply bg-cream opacity-100;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  @apply text-cream;
+}
+
+.product-card {
+  @apply bg-medium-gray rounded-lg overflow-hidden transition-transform duration-300 hover:shadow-lg hover:shadow-accent/20 hover:-translate-y-1;
+}
+
+.btn-primary {
+  @apply bg-cream text-dark-gray font-semibold py-2 px-6 rounded-md hover:bg-cream-dark transition-colors duration-300;
+}
+
+.btn-secondary {
+  @apply bg-light-gray text-cream font-semibold py-2 px-6 rounded-md hover:bg-medium-gray transition-colors duration-300 border border-cream/20;
+}
+
+.input-field {
+  @apply bg-light-gray border border-cream/20 rounded-md px-4 py-2 text-cream focus:outline-none focus:ring-2 focus:ring-cream/30;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold mb-6 text-cream relative inline-block;
+}
+
+.section-title::after {
+  content: '';
+  @apply absolute bottom-0 left-0 w-1/2 h-1 bg-accent rounded-full;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+
+.newsletter-container {
+  /* Apply pulsate animation */
+  animation: pulsate 3s ease-in-out infinite;
+}
+
+/* Optional: adjust container max width for the newsletter */
+.newsletter-inner {
+  max-width: 600px; /* adjust as needed */
+  margin: 0 auto;
+}
